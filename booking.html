@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Enquiry | Next Level</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <strong>next level</strong>
+            <small>GAMING & ESPORTS ARENA</small>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="about.html">
+                ABOUT US
+            </a>
+
+            <a href="packages.html">
+                PACKAGES
+            </a>
+
+            <a href="experiences.html">
+                EXPERIENCES
+            </a>
+
+            <a href="fees.html">
+                CALCULATE FEES
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <section class="page">
+
+            <h1 class="page-title">
+                BOOK YOUR EXPERIENCE
+            </h1>
+
+            <p class="page-subtitle">
+                Complete the form below to book your gaming experience
+            </p>
+
+
+            <!-- =========================
+                 BOOKING FORM
+            ========================== -->
+
+            <div class="booking-box">
+
+                <form>
+
+
+                    <!-- NAME + EMAIL -->
+
+                    <div class="booking-grid">
+
+                        <div>
+
+                            <label for="name">
+                                FULL NAME
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="email">
+                                EMAIL ADDRESS
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PHONE + EXPERIENCE -->
+
+                    <div class="booking-grid">
+
+                        <div>
+
+                            <label for="phone">
+                                PHONE NUMBER
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="experience">
+                                SELECT EXPERIENCE
+                            </label>
+
+                            <select
+                                id="experience"
+                                name="experience"
+                                required
+                            >
+
+                                <option value="">
+                                    Select an experience
+                                </option>
+
+                                <option value="Ultimate Gamer Pass">
+                                    Ultimate Gamer Pass
+                                </option>
+
+                                <option value="VIP Gaming Experience">
+                                    VIP Gaming Experience
+                                </option>
+
+                                <option value="Esports Training Package">
+                                    Esports Training Package
+                                </option>
+
+                                <option value="VR Experience">
+                                    VR Experience
+                                </option>
+
+                                <option value="Racing Experience">
+                                    Racing Experience
+                                </option>
+
+                                <option value="Escape Room">
+                                    Escape Room
+                                </option>
+
+                                <option value="Birthday Experience">
+                                    Birthday Experience
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DATE + TIME -->
+
+                    <div class="booking-grid">
+
+                        <div>
+
+                            <label for="date">
+                                PREFERRED DATE
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label for="time">
+                                PREFERRED TIME
+                            </label>
+
+                            <input
+                                type="time"
+                                id="time"
+                                name="time"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- NUMBER OF PEOPLE -->
+
+                    <div>
+
+                        <label for="people">
+                            NUMBER OF PEOPLE
+                        </label>
+
+                        <input
+                            type="number"
+                            id="people"
+                            name="people"
+                            min="1"
+                            max="20"
+                            placeholder="Enter number of people"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- MESSAGE -->
+
+                    <div>
+
+                        <label for="message">
+                            ADDITIONAL MESSAGE
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Enter any additional information..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- SUBMIT -->
+
+                    <button
+                        type="submit"
+                        class="btn btn-purple"
+                    >
+                        SUBMIT ENQUIRY
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- =========================
+                 INFORMATION
+            ========================== -->
+
+            <div
+                class="card"
+                style="max-width: 650px; margin: 40px auto 0;"
+            >
+
+                <h3>
+                    BOOK YOUR NEXT EXPERIENCE
+                </h3>
+
+                <p>
+                    Complete the booking enquiry form with
+                    your preferred experience, date and time.
+                    Our team can then review your enquiry
+                    and assist with your booking.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <strong>next level</strong>
+
+            <small>
+                GAMING & ESPORTS ARENA
+            </small>
+
+        </div>
+
+        <p>
+            © 2026 Next Level Gaming & Esports Arena
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

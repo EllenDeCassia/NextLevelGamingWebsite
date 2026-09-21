@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculate Total Fees | Next Level</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <strong>next level</strong>
+            <small>GAMING & ESPORTS ARENA</small>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                HOME
+            </a>
+
+            <a href="about.html">
+                ABOUT US
+            </a>
+
+            <a href="packages.html">
+                PACKAGES
+            </a>
+
+            <a href="experiences.html">
+                EXPERIENCES
+            </a>
+
+            <a href="fees.html" class="active">
+                CALCULATE FEES
+            </a>
+
+            <a href="contact.html">
+                CONTACT
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main>
+
+        <section class="page">
+
+            <h1 class="page-title">
+                CALCULATE TOTAL FEES
+            </h1>
+
+            <p class="page-subtitle">
+                Select your experiences and calculate your total cost
+            </p>
+
+
+            <!-- =========================
+                 FEE CALCULATOR
+            ========================== -->
+
+            <div class="fees-content">
+
+
+                <!-- =========================
+                     FORM
+                ========================== -->
+
+                <div class="fee-form">
+
+                    <h2>
+                        SELECT EXPERIENCES
+                    </h2>
+
+
+                    <!-- VR -->
+
+                    <label for="vr">
+                        VR EXPERIENCE
+                    </label>
+
+                    <input
+                        type="number"
+                        id="vr"
+                        min="0"
+                        value="0"
+                    >
+
+
+                    <!-- RACING -->
+
+                    <label for="racing">
+                        RACING EXPERIENCE
+                    </label>
+
+                    <input
+                        type="number"
+                        id="racing"
+                        min="0"
+                        value="0"
+                    >
+
+
+                    <!-- ESCAPE ROOM -->
+
+                    <label for="escape">
+                        ESCAPE ROOM
+                    </label>
+
+                    <input
+                        type="number"
+                        id="escape"
+                        min="0"
+                        value="0"
+                    >
+
+
+                    <!-- BIRTHDAY -->
+
+                    <label for="birthday">
+                        BIRTHDAY EXPERIENCE
+                    </label>
+
+                    <input
+                        type="number"
+                        id="birthday"
+                        min="0"
+                        value="0"
+                    >
+
+
+                    <button
+                        type="button"
+                        class="btn"
+                        onclick="calculateFees()"
+                    >
+                        CALCULATE TOTAL
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     SUMMARY
+                ========================== -->
+
+                <div class="fee-summary">
+
+                    <h2>
+                        FEE SUMMARY
+                    </h2>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <span id="subtotal">
+                            R0.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Discount
+                        </span>
+
+                        <span id="discount">
+                            R0.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            VAT (15%)
+                        </span>
+
+                        <span id="vat">
+                            R0.00
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            TOTAL
+                        </span>
+
+                        <span id="total">
+                            R0.00
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+           
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <strong>next level</strong>
+
+            <small>
+                GAMING & ESPORTS ARENA
+            </small>
+
+        </div>
+
+        <p>
+            © 2026 Next Level Gaming & Esports Arena
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

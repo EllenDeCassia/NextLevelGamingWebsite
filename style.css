@@ -1,0 +1,985 @@
+/* =========================================
+   NEXT LEVEL GAMING & ESPORTS ARENA
+   PHASE 3 - WEBSITE
+========================================= */
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d1d;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #080d1d;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo strong {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo small {
+    font-size: 5px;
+    letter-spacing: 1px;
+    color: #9da5b8;
+}
+
+
+/* NAVIGATION */
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: #ffffff;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #00bfff;
+}
+
+.navbar nav a.active {
+    color: #00bfff;
+}
+
+
+/* =========================================
+   COMMON PAGE
+========================================= */
+
+.page {
+    width: 100%;
+    min-height: 500px;
+    padding: 45px 6%;
+}
+
+
+/* PAGE TITLE */
+
+.page-title {
+    text-align: center;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    text-align: center;
+
+    color: #9da5b8;
+
+    font-size: 8px;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    display: inline-block;
+
+    background: #00bfff;
+    color: #ffffff;
+
+    padding: 10px 20px;
+
+    border-radius: 4px;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    border: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #8b3dff;
+}
+
+
+.btn-purple {
+    background: #8b3dff;
+}
+
+.btn-purple:hover {
+    background: #00bfff;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card {
+    background: #151d35;
+
+    border-radius: 7px;
+
+    padding: 22px;
+
+    border: 1px solid #202a45;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #8b3dff;
+}
+
+.card h3 {
+    color: #ffffff;
+
+    font-size: 11px;
+
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #aeb5c4;
+
+    font-size: 7px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.price {
+    color: #8b3dff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.section-image {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   HOME PAGE
+========================================= */
+
+.hero {
+    min-height: 500px;
+
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(5, 10, 25, 0.55),
+            rgba(5, 10, 25, 0.85)
+        ),
+        url("images/gaming.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-small {
+    color: #00bfff;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 42px;
+
+    line-height: 1.05;
+
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #b5bdcc;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   EXPERIENCE CARDS
+========================================= */
+
+.experience-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.experience-card {
+    background: #151d35;
+
+    border-radius: 6px;
+
+    padding: 20px;
+
+    min-height: 145px;
+
+    border: 1px solid #202a45;
+}
+
+.experience-card h3 {
+    font-size: 9px;
+
+    margin-bottom: 12px;
+}
+
+.experience-card p {
+    color: #9da5b8;
+
+    font-size: 6px;
+
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+.experience-card a {
+    color: #00bfff;
+
+    font-size: 6px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PACKAGE GRID
+========================================= */
+
+.package-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 40px;
+
+    align-items: stretch;
+}
+
+.package-card {
+    background: #151d35;
+
+    border-radius: 7px;
+
+    padding: 22px;
+
+    min-height: 170px;
+
+    border: 1px solid #202a45;
+}
+
+.package-card h3 {
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+}
+
+.package-card ul {
+    list-style: none;
+
+    margin: 12px 0 18px;
+}
+
+.package-card li {
+    color: #aeb5c4;
+
+    font-size: 6px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   INDIVIDUAL EXPERIENCE
+========================================= */
+
+.individual-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.individual-card {
+    background: #151d35;
+
+    padding: 20px;
+
+    border-radius: 7px;
+
+    min-height: 155px;
+
+    border: 1px solid #202a45;
+}
+
+.individual-card h3 {
+    font-size: 9px;
+
+    line-height: 1.4;
+
+    margin-bottom: 15px;
+}
+
+.individual-card p {
+    color: #aeb5c4;
+
+    font-size: 6px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.about-image {
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+.about-text h2 {
+    font-size: 13px;
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+}
+
+.about-text p {
+    color: #aeb5c4;
+
+    font-size: 7px;
+
+    line-height: 1.6;
+
+    margin-bottom: 22px;
+}
+
+
+/* GOALS */
+
+.goals {
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.goal {
+    background: #151d35;
+
+    border: 1px solid #8b3dff;
+
+    padding: 18px;
+
+    border-radius: 6px;
+}
+
+.goal-number {
+    color: #00bfff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.goal h3 {
+    display: inline;
+
+    font-size: 8px;
+}
+
+.goal p {
+    color: #aeb5c4;
+
+    font-size: 6px;
+
+    line-height: 1.5;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================
+   INDIVIDUAL PACKAGE PAGE
+========================================= */
+
+.package-detail {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+    min-height: 400px;
+}
+
+.package-detail-image {
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+.package-detail-text h1 {
+    font-size: 25px;
+
+    margin-bottom: 15px;
+}
+
+.package-detail-text > p {
+    color: #aeb5c4;
+
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+.package-detail-text h2 {
+    font-size: 10px;
+
+    margin-bottom: 15px;
+}
+
+.package-detail-text ul {
+    list-style: none;
+
+    margin-bottom: 25px;
+}
+
+.package-detail-text li {
+    color: #ffffff;
+
+    font-size: 8px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   FEES PAGE
+========================================= */
+
+.fees-content {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+}
+
+.fee-form,
+.fee-summary {
+    background: #151d35;
+
+    border: 1px solid #8b3dff;
+
+    border-radius: 6px;
+
+    padding: 20px;
+}
+
+.fee-form {
+    width: 350px;
+}
+
+.fee-summary {
+    width: 210px;
+}
+
+.fee-form label {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 7px;
+
+    margin-bottom: 5px;
+}
+
+.fee-form input {
+    width: 100%;
+
+    height: 27px;
+
+    background: #090e20;
+
+    border: 1px solid #343b50;
+
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    margin-bottom: 13px;
+
+    padding: 5px;
+
+    font-size: 7px;
+}
+
+.fee-summary h2 {
+    font-size: 11px;
+
+    margin-bottom: 15px;
+}
+
+.summary-line {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #aeb5c4;
+
+    font-size: 7px;
+
+    margin-bottom: 9px;
+}
+
+.summary-total {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+    margin-top: 15px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #454b5d;
+}
+
+
+/* =========================================
+   BOOKING PAGE
+========================================= */
+
+.booking-box {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    background: #151d35;
+
+    padding: 30px;
+
+    border-radius: 7px;
+
+    border: 1px solid #202a45;
+}
+
+.booking-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+.booking-box label {
+    color: #ffffff;
+
+    font-size: 7px;
+
+    margin-bottom: 5px;
+
+    display: block;
+}
+
+.booking-box input,
+.booking-box select,
+.booking-box textarea {
+    width: 100%;
+
+    background: #090e20;
+
+    border: 1px solid #343b50;
+
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    padding: 8px;
+
+    font-size: 7px;
+}
+
+.booking-box textarea {
+    height: 80px;
+
+    resize: none;
+}
+
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-page {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 80px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.contact-information h1 {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.contact-intro {
+    color: #aeb5c4;
+
+    font-size: 7px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+.contact-detail {
+    margin-bottom: 20px;
+}
+
+.contact-detail h2,
+.follow-us h2 {
+    font-size: 8px;
+
+    margin-bottom: 5px;
+}
+
+.contact-detail p,
+.follow-us p {
+    color: #aeb5c4;
+
+    font-size: 7px;
+
+    line-height: 1.5;
+}
+
+
+/* MESSAGE BOX */
+
+.message-box {
+    background: #151d35;
+
+    border: 1px solid #343b50;
+
+    border-radius: 6px;
+
+    padding: 20px;
+}
+
+.message-box h2 {
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.message-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+}
+
+.message-box input,
+.message-box textarea {
+    width: 100%;
+
+    background: #090e20;
+
+    border: 1px solid #343b50;
+
+    color: #ffffff;
+
+    border-radius: 3px;
+
+    padding: 8px;
+
+    font-size: 7px;
+
+    margin-bottom: 10px;
+}
+
+.message-box textarea {
+    height: 70px;
+
+    resize: none;
+}
+
+.send-button {
+    background: #8b3dff;
+
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 3px;
+
+    padding: 9px 25px;
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background: #00bfff;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+
+    min-height: 90px;
+
+    background: #070b17;
+
+    border-top: 1px solid #121a30;
+
+    padding: 25px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer-logo {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.footer-logo strong {
+    font-size: 14px;
+}
+
+.footer-logo small {
+    color: #7e8598;
+
+    font-size: 5px;
+
+    letter-spacing: 1px;
+}
+
+footer p {
+    color: #7e8598;
+
+    font-size: 6px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .navbar nav {
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .experience-grid,
+    .individual-grid,
+    .package-grid,
+    .goals {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content,
+    .package-detail,
+    .contact-page {
+        grid-template-columns: 1fr;
+    }
+
+    .fees-content {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+}
