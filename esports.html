@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta
+        name="description"
+        content="Improve your competitive gaming skills with the Esports Training Package at Next Level Gaming & Esports Arena."
+    >
+
     <title>Esports Training Package | Next Level</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
 
     <!-- =========================
          NAVIGATION
@@ -24,7 +29,7 @@
             <small>GAMING & ESPORTS ARENA</small>
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
 
             <a href="index.html">
                 HOME
@@ -34,7 +39,11 @@
                 ABOUT US
             </a>
 
-            <a href="packages.html">
+            <a
+                href="packages.html"
+                class="active"
+                aria-current="page"
+            >
                 PACKAGES
             </a>
 
@@ -54,30 +63,29 @@
 
     </header>
 
-
     <!-- =========================
-         MAIN
+         MAIN CONTENT
     ========================== -->
 
     <main>
 
         <section class="page">
 
+            <!-- PACKAGE DETAILS -->
+
             <div class="package-detail">
 
-
-                <!-- IMAGE -->
+                <!-- PACKAGE IMAGE -->
 
                 <div>
 
                     <img
                         src="images/gaming.jpg"
-                        alt="Esports training gaming setup"
+                        alt="Competitive gaming setup for the Esports Training Package"
                         class="package-detail-image"
                     >
 
                 </div>
-
 
                 <!-- PACKAGE INFORMATION -->
 
@@ -98,74 +106,63 @@
                         improve and compete.
                     </p>
 
-
                     <h2>
                         PACKAGE INCLUDES
                     </h2>
 
                     <ul>
 
-                        <li>
-                            ✓ Competitive gaming setup
-                        </li>
+                        <li>✓ Competitive gaming setup</li>
 
-                        <li>
-                            ✓ Dedicated training sessions
-                        </li>
+                        <li>✓ Dedicated training sessions</li>
 
-                        <li>
-                            ✓ Esports environment
-                        </li>
+                        <li>✓ Esports environment</li>
 
-                        <li>
-                            ✓ Performance practice
-                        </li>
+                        <li>✓ Performance practice</li>
 
-                        <li>
-                            ✓ Competitive gaming activities
-                        </li>
+                        <li>✓ Competitive gaming activities</li>
 
                     </ul>
 
+                    <!-- PACKAGE PRICE -->
 
-                    <div class="price">
+                    <p class="price">
                         R750
+                    </p>
+
+                    <!-- PACKAGE BUTTONS -->
+
+                    <div class="package-detail-actions">
+
+                        <a
+                            href="booking.html?experience=esports"
+                            class="btn"
+                        >
+                            BOOK THIS PACKAGE
+                        </a>
+
+                        <a
+                            href="packages.html"
+                            class="btn btn-purple"
+                        >
+                            BACK TO PACKAGES
+                        </a>
+
                     </div>
-
-
-                    <a
-                        href="booking.html"
-                        class="btn"
-                    >
-                        BOOK THIS PACKAGE
-                    </a>
-
-                    <a
-                        href="packages.html"
-                        class="btn btn-purple"
-                        style="margin-left: 10px;"
-                    >
-                        BACK TO PACKAGES
-                    </a>
 
                 </div>
 
             </div>
 
-
-
             <!-- =========================
                  CALL TO ACTION
             ========================== -->
 
-            <div
-                class="card"
-                style="text-align: center; margin-top: 60px;"
-            >
+            <div class="card package-detail-cta">
 
-                <h3>
+                <h2>
                     READY TO COMPETE?
-                </h3>
+                </h2>
 
                 <p>
                     Book the Esports Training Package
@@ -173,21 +170,29 @@
                     to the next level.
                 </p>
 
-                <br>
+                <div class="package-detail-actions">
 
-                <a
-                    href="booking.html"
-                    class="btn btn-purple"
-                >
-                    BOOK NOW
-                </a>
+                    <a
+                        href="booking.html?experience=esports"
+                        class="btn btn-purple"
+                    >
+                        BOOK NOW
+                    </a>
+
+                    <a
+                        href="fees.html"
+                        class="btn"
+                    >
+                        CALCULATE FEES
+                    </a>
+
+                </div>
 
             </div>
 
         </section>
 
     </main>
-
 
     <!-- =========================
          FOOTER
@@ -206,11 +211,10 @@
         </div>
 
         <p>
-            © 2026 Next Level Gaming & Esports Arena
+            &copy; 2026 Next Level Gaming & Esports Arena
         </p>
 
     </footer>
-
 
 </body>
 

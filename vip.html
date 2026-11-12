@@ -1,9 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Enjoy the VIP Gaming Experience at Next Level Gaming & Esports Arena."
+    >
 
     <title>VIP Gaming Experience | Next Level</title>
 
@@ -12,10 +18,7 @@
 
 <body>
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- NAVIGATION -->
 
     <header class="navbar">
 
@@ -24,60 +27,49 @@
             <small>GAMING & ESPORTS ARENA</small>
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
 
-            <a href="index.html">
-                HOME
-            </a>
+            <a href="index.html">HOME</a>
 
-            <a href="about.html">
-                ABOUT US
-            </a>
+            <a href="about.html">ABOUT US</a>
 
-            <a href="packages.html">
+            <a href="packages.html"
+               class="active"
+               aria-current="page">
                 PACKAGES
             </a>
 
-            <a href="experiences.html">
-                EXPERIENCES
-            </a>
+            <a href="experiences.html">EXPERIENCES</a>
 
-            <a href="fees.html">
-                CALCULATE FEES
-            </a>
+            <a href="fees.html">CALCULATE FEES</a>
 
-            <a href="contact.html">
-                CONTACT
-            </a>
+            <a href="contact.html">CONTACT</a>
 
         </nav>
 
     </header>
 
-
-    <!-- =========================
-         MAIN
-    ========================== -->
+    <!-- MAIN CONTENT -->
 
     <main>
 
         <section class="page">
 
+            <!-- PACKAGE DETAILS -->
+
             <div class="package-detail">
 
-
-                <!-- IMAGE -->
+                <!-- PACKAGE IMAGE -->
 
                 <div>
 
                     <img
                         src="images/gaming.jpg"
-                        alt="VIP gaming experience"
+                        alt="Premium gaming setup for the VIP Gaming Experience"
                         class="package-detail-image"
                     >
 
                 </div>
-
 
                 <!-- PACKAGE INFORMATION -->
 
@@ -98,89 +90,84 @@
                         service.
                     </p>
 
-
                     <h2>
                         PACKAGE INCLUDES
                     </h2>
 
                     <ul>
 
-                        <li>
-                            ✓ Private gaming setup
-                        </li>
+                        <li>✓ Private gaming setup</li>
 
-                        <li>
-                            ✓ Premium gaming session
-                        </li>
+                        <li>✓ Premium gaming session</li>
 
-                        <li>
-                            ✓ Priority booking
-                        </li>
+                        <li>✓ Priority booking</li>
 
-                        <li>
-                            ✓ Food and drinks
-                        </li>
+                        <li>✓ Food and drinks</li>
 
-                        <li>
-                            ✓ Exclusive gaming experience
-                        </li>
+                        <li>✓ Exclusive gaming experience</li>
 
                     </ul>
 
+                    <!-- PACKAGE PRICE -->
 
-                    <div class="price">
+                    <p class="price">
                         R1 500
+                    </p>
+
+                    <!-- PACKAGE BUTTONS -->
+
+                    <div class="package-detail-actions">
+
+                        <a
+                            href="booking.html?experience=vip"
+                            class="btn btn-purple"
+                        >
+                            BOOK THIS PACKAGE
+                        </a>
+
+                        <a
+                            href="packages.html"
+                            class="btn"
+                        >
+                            BACK TO PACKAGES
+                        </a>
+
                     </div>
-
-
-                    <a
-                        href="booking.html"
-                        class="btn btn-purple"
-                    >
-                        BOOK THIS PACKAGE
-                    </a>
-
-                    <a
-                        href="packages.html"
-                        class="btn"
-                        style="margin-left: 10px;"
-                    >
-                        BACK TO PACKAGES
-                    </a>
 
                 </div>
 
             </div>
 
+            <!-- CALL TO ACTION -->
 
-          
+            <div class="card package-detail-cta">
 
-            <!-- =========================
-                 CALL TO ACTION
-            ========================== -->
-
-            <div
-                class="card"
-                style="text-align: center; margin-top: 60px;"
-            >
-
-                <h3>
+                <h2>
                     READY FOR THE VIP EXPERIENCE?
-                </h3>
+                </h2>
 
                 <p>
                     Book your premium gaming experience
                     at Next Level.
                 </p>
 
-                <br>
+                <div class="package-detail-actions">
 
-                <a
-                    href="booking.html"
-                    class="btn"
-                >
-                    BOOK NOW
-                </a>
+                    <a
+                        href="booking.html?experience=vip"
+                        class="btn btn-purple"
+                    >
+                        BOOK NOW
+                    </a>
+
+                    <a
+                        href="fees.html"
+                        class="btn"
+                    >
+                        CALCULATE FEES
+                    </a>
+
+                </div>
 
             </div>
 
@@ -188,10 +175,7 @@
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -206,11 +190,10 @@
         </div>
 
         <p>
-            © 2026 Next Level Gaming & Esports Arena
+            &copy; 2026 Next Level Gaming & Esports Arena
         </p>
 
     </footer>
-
 
 </body>
 

@@ -1,9 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Submit a gaming experience booking enquiry at Next Level Gaming & Esports Arena.">
 
     <title>Booking Enquiry | Next Level</title>
 
@@ -12,10 +16,7 @@
 
 <body>
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- NAVIGATION -->
 
     <header class="navbar">
 
@@ -24,40 +25,18 @@
             <small>GAMING & ESPORTS ARENA</small>
         </div>
 
-        <nav>
-
-            <a href="index.html">
-                HOME
-            </a>
-
-            <a href="about.html">
-                ABOUT US
-            </a>
-
-            <a href="packages.html">
-                PACKAGES
-            </a>
-
-            <a href="experiences.html">
-                EXPERIENCES
-            </a>
-
-            <a href="fees.html">
-                CALCULATE FEES
-            </a>
-
-            <a href="contact.html">
-                CONTACT
-            </a>
-
+        <nav aria-label="Main navigation">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="experiences.html">EXPERIENCES</a>
+            <a href="fees.html">CALCULATE FEES</a>
+            <a href="contact.html">CONTACT</a>
         </nav>
 
     </header>
 
-
-    <!-- =========================
-         MAIN
-    ========================== -->
+    <!-- MAIN CONTENT -->
 
     <main>
 
@@ -68,82 +47,70 @@
             </h1>
 
             <p class="page-subtitle">
-                Complete the form below to book your gaming experience
+                Complete the form below to submit your
+                gaming experience booking enquiry.
             </p>
 
-
-            <!-- =========================
-                 BOOKING FORM
-            ========================== -->
+            <!-- BOOKING FORM -->
 
             <div class="booking-box">
 
-                <form>
+                <form id="bookingForm">
 
-
-                    <!-- NAME + EMAIL -->
+                    <!-- NAME AND EMAIL -->
 
                     <div class="booking-grid">
 
                         <div>
-
-                            <label for="name">
-                                FULL NAME
-                            </label>
+                            <label for="name">FULL NAME</label>
 
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
                                 placeholder="Enter your full name"
+                                minlength="2"
+                                maxlength="100"
+                                autocomplete="name"
                                 required
                             >
-
                         </div>
 
-
                         <div>
-
-                            <label for="email">
-                                EMAIL ADDRESS
-                            </label>
+                            <label for="email">EMAIL ADDRESS</label>
 
                             <input
                                 type="email"
                                 id="email"
                                 name="email"
                                 placeholder="Enter your email"
+                                autocomplete="email"
                                 required
                             >
-
                         </div>
 
                     </div>
 
-
-                    <!-- PHONE + EXPERIENCE -->
+                    <!-- PHONE AND EXPERIENCE -->
 
                     <div class="booking-grid">
 
                         <div>
-
-                            <label for="phone">
-                                PHONE NUMBER
-                            </label>
+                            <label for="phone">PHONE NUMBER</label>
 
                             <input
                                 type="tel"
                                 id="phone"
                                 name="phone"
                                 placeholder="Enter your phone number"
+                                minlength="9"
+                                maxlength="20"
+                                autocomplete="tel"
                                 required
                             >
-
                         </div>
 
-
                         <div>
-
                             <label for="experience">
                                 SELECT EXPERIENCE
                             </label>
@@ -153,55 +120,48 @@
                                 name="experience"
                                 required
                             >
-
                                 <option value="">
                                     Select an experience
                                 </option>
 
-                                <option value="Ultimate Gamer Pass">
+                                <option value="ultimate">
                                     Ultimate Gamer Pass
                                 </option>
 
-                                <option value="VIP Gaming Experience">
+                                <option value="vip">
                                     VIP Gaming Experience
                                 </option>
 
-                                <option value="Esports Training Package">
+                                <option value="esports">
                                     Esports Training Package
                                 </option>
 
-                                <option value="VR Experience">
+                                <option value="vr">
                                     VR Experience
                                 </option>
 
-                                <option value="Racing Experience">
+                                <option value="racing">
                                     Racing Experience
                                 </option>
 
-                                <option value="Escape Room">
+                                <option value="escape">
                                     Escape Room
                                 </option>
 
-                                <option value="Birthday Experience">
+                                <option value="birthday">
                                     Birthday Experience
                                 </option>
-
                             </select>
-
                         </div>
 
                     </div>
 
-
-                    <!-- DATE + TIME -->
+                    <!-- DATE AND TIME -->
 
                     <div class="booking-grid">
 
                         <div>
-
-                            <label for="date">
-                                PREFERRED DATE
-                            </label>
+                            <label for="date">PREFERRED DATE</label>
 
                             <input
                                 type="date"
@@ -209,32 +169,26 @@
                                 name="date"
                                 required
                             >
-
                         </div>
 
-
                         <div>
-
-                            <label for="time">
-                                PREFERRED TIME
-                            </label>
+                            <label for="time">PREFERRED TIME</label>
 
                             <input
                                 type="time"
                                 id="time"
                                 name="time"
+                                min="10:00"
+                                max="22:00"
                                 required
                             >
-
                         </div>
 
                     </div>
 
-
                     <!-- NUMBER OF PEOPLE -->
 
                     <div>
-
                         <label for="people">
                             NUMBER OF PEOPLE
                         </label>
@@ -245,29 +199,26 @@
                             name="people"
                             min="1"
                             max="20"
+                            step="1"
                             placeholder="Enter number of people"
                             required
                         >
-
                     </div>
 
-
-                    <!-- MESSAGE -->
+                    <!-- ADDITIONAL MESSAGE -->
 
                     <div>
-
                         <label for="message">
-                            ADDITIONAL MESSAGE
+                            ADDITIONAL MESSAGE (OPTIONAL)
                         </label>
 
                         <textarea
                             id="message"
                             name="message"
+                            maxlength="1000"
                             placeholder="Enter any additional information..."
                         ></textarea>
-
                     </div>
-
 
                     <!-- SUBMIT -->
 
@@ -278,29 +229,27 @@
                         SUBMIT ENQUIRY
                     </button>
 
+                    <p
+                        id="bookingStatus"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
                 </form>
 
             </div>
 
+            <!-- INFORMATION -->
 
-            <!-- =========================
-                 INFORMATION
-            ========================== -->
+            <div class="card booking-information">
 
-            <div
-                class="card"
-                style="max-width: 650px; margin: 40px auto 0;"
-            >
-
-                <h3>
-                    BOOK YOUR NEXT EXPERIENCE
-                </h3>
+                <h2>BOOK YOUR NEXT EXPERIENCE</h2>
 
                 <p>
                     Complete the booking enquiry form with
                     your preferred experience, date and time.
-                    Our team can then review your enquiry
-                    and assist with your booking.
+                    This demonstration validates your enquiry
+                    but does not send a real booking request.
                 </p>
 
             </div>
@@ -309,29 +258,103 @@
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
         <div class="footer-logo">
-
             <strong>next level</strong>
-
-            <small>
-                GAMING & ESPORTS ARENA
-            </small>
-
+            <small>GAMING & ESPORTS ARENA</small>
         </div>
 
         <p>
-            © 2026 Next Level Gaming & Esports Arena
+            &copy; 2026 Next Level Gaming & Esports Arena
         </p>
 
     </footer>
 
+    <!-- BOOKING JAVASCRIPT -->
+
+    <script>
+        const bookingForm = document.getElementById("bookingForm");
+        const bookingStatus = document.getElementById("bookingStatus");
+        const experienceSelect = document.getElementById("experience");
+        const dateInput = document.getElementById("date");
+
+        // Automatically select experience from URL
+        const params = new URLSearchParams(window.location.search);
+        const selectedExperience = params.get("experience");
+
+        const validExperiences = [
+            "ultimate", "vip", "esports", "vr",
+            "racing", "escape", "birthday"
+        ];
+
+        if (validExperiences.includes(selectedExperience)) {
+            experienceSelect.value = selectedExperience;
+        }
+
+        // Set today's date as the minimum
+        function getTodayLocal() {
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, "0");
+            const day = String(today.getDate()).padStart(2, "0");
+
+            return `${year}-${month}-${day}`;
+        }
+
+        dateInput.min = getTodayLocal();
+
+        // Validate booking enquiry
+        bookingForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            bookingStatus.textContent = "";
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const experience = experienceSelect.value;
+            const date = dateInput.value;
+            const time = document.getElementById("time").value;
+            const people = Number(document.getElementById("people").value);
+
+            dateInput.min = getTodayLocal();
+
+            if (!bookingForm.checkValidity()) {
+                bookingForm.reportValidity();
+                return;
+            }
+
+            if (
+                name.length < 2 ||
+                email === "" ||
+                phone.length < 9 ||
+                !validExperiences.includes(experience) ||
+                date < getTodayLocal() ||
+                time < "10:00" ||
+                time > "22:00" ||
+                !Number.isInteger(people) ||
+                people < 1 ||
+                people > 20
+            ) {
+                bookingStatus.textContent =
+                    "Please check your details and enter valid booking information.";
+
+                bookingStatus.style.color = "#ff6b6b";
+                return;
+            }
+
+            bookingStatus.textContent =
+                "Booking enquiry validated successfully. " +
+                "This is a demonstration; no booking has been submitted.";
+
+            bookingStatus.style.color = "#30FF88";
+
+            bookingForm.reset();
+        });
+    </script>
 
 </body>
 

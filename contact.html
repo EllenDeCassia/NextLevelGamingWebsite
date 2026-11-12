@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,13 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact | Next Level</title>
+    <title>Contact Us | Next Level Gaming & Esports Arena</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
 
     <!-- =========================
          NAVIGATION
@@ -24,29 +24,14 @@
             <small>GAMING & ESPORTS ARENA</small>
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
 
-            <a href="index.html">
-                HOME
-            </a>
-
-            <a href="about.html">
-                ABOUT US
-            </a>
-
-            <a href="packages.html">
-                PACKAGES
-            </a>
-
-            <a href="experiences.html">
-                EXPERIENCES
-            </a>
-
-            <a href="fees.html">
-                CALCULATE FEES
-            </a>
-
-            <a href="contact.html" class="active">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="experiences.html">EXPERIENCES</a>
+            <a href="fees.html">CALCULATE FEES</a>
+            <a href="contact.html" class="active" aria-current="page">
                 CONTACT
             </a>
 
@@ -54,9 +39,8 @@
 
     </header>
 
-
     <!-- =========================
-         MAIN
+         MAIN CONTENT
     ========================== -->
 
     <main>
@@ -65,160 +49,174 @@
 
             <div class="contact-page">
 
-
-                <!-- =========================
-                     CONTACT INFORMATION
-                ========================== -->
+                <!-- CONTACT INFORMATION -->
 
                 <div class="contact-information">
 
-                    <h1>
-                        CONTACT US
-                    </h1>
+                    <h1>CONTACT US</h1>
 
                     <p class="contact-intro">
-                        Have a question about our gaming
-                        experiences, packages or bookings?
-                        Get in touch with the Next Level team.
+                        Have a question about our gaming experiences,
+                        packages or bookings? Get in touch with the
+                        Next Level team. We would love to hear from you!
                     </p>
 
-
-                    <!-- ADDRESS -->
+                    <!-- LOCATION -->
 
                     <div class="contact-detail">
 
-                        <h2>
-                            LOCATION
-                        </h2>
+                        <h2>LOCATION</h2>
 
                         <p>
-                            Next Level Gaming & Esports Arena
+                            Next Level Gaming & Esports Arena<br>
+                            Johannesburg, South Africa
                         </p>
 
                     </div>
-
 
                     <!-- PHONE -->
 
                     <div class="contact-detail">
 
-                        <h2>
-                            PHONE
-                        </h2>
+                        <h2>PHONE</h2>
 
                         <p>
-                            +27 12 345 6789
+                            <a href="tel:+27123456789">
+                                +27 12 345 6789
+                            </a>
                         </p>
 
                     </div>
-
 
                     <!-- EMAIL -->
 
                     <div class="contact-detail">
 
-                        <h2>
-                            EMAIL
-                        </h2>
+                        <h2>EMAIL</h2>
 
                         <p>
-                            info@nextlevelgaming.co.za
+                            <a href="mailto:info@nextlevelgaming.co.za">
+                                info@nextlevelgaming.co.za
+                            </a>
                         </p>
 
                     </div>
-
 
                     <!-- OPENING HOURS -->
 
                     <div class="contact-detail">
 
-                        <h2>
-                            OPENING HOURS
-                        </h2>
+                        <h2>OPENING HOURS</h2>
 
                         <p>
-                            Monday – Sunday
-                            <br>
+                            Monday – Sunday<br>
                             10:00 – 22:00
                         </p>
 
                     </div>
 
-
                     <!-- SOCIAL MEDIA -->
 
                     <div class="follow-us">
 
-                        <h2>
-                            FOLLOW US
-                        </h2>
+                        <h2>FOLLOW US</h2>
 
                         <p>
-                            Instagram &nbsp; | &nbsp;
-                            Facebook &nbsp; | &nbsp;
-                            TikTok
+                            Instagram | Facebook | TikTok
                         </p>
 
                     </div>
 
                 </div>
 
-
                 <!-- =========================
-                     MESSAGE FORM
+                     CONTACT FORM
                 ========================== -->
 
                 <div class="message-box">
 
-                    <h2>
-                        SEND US A MESSAGE
-                    </h2>
+                    <h2>SEND US A MESSAGE</h2>
 
+                    <p class="contact-intro">
+                        Complete the form below and let us know
+                        how we can help you.
+                    </p>
 
-                    <form>
+                    <form id="contactForm">
 
-
-                        <!-- NAME + EMAIL -->
+                        <!-- NAME AND EMAIL -->
 
                         <div class="message-row">
 
-                            <input
-                                type="text"
-                                name="name"
-                                placeholder="Your Name"
-                                required
-                            >
+                            <div>
 
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="Your Email"
-                                required
-                            >
+                                <label for="contactName">
+                                    Full Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="name"
+                                    placeholder="Your Full Name"
+                                    minlength="2"
+                                    maxlength="100"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                            <div>
+
+                                <label for="contactEmail">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    name="email"
+                                    placeholder="Your Email"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
 
                         </div>
 
-
                         <!-- SUBJECT -->
+
+                        <label for="contactSubject">
+                            Subject
+                        </label>
 
                         <input
                             type="text"
+                            id="contactSubject"
                             name="subject"
-                            placeholder="Subject"
+                            placeholder="Message Subject"
+                            maxlength="150"
                             required
                         >
 
-
                         <!-- MESSAGE -->
 
+                        <label for="contactMessage">
+                            Your Message
+                        </label>
+
                         <textarea
+                            id="contactMessage"
                             name="message"
-                            placeholder="Your Message"
+                            placeholder="Write your message here..."
+                            minlength="10"
+                            maxlength="2000"
                             required
                         ></textarea>
 
-
-                        <!-- BUTTON -->
+                        <!-- SUBMIT BUTTON -->
 
                         <button
                             type="submit"
@@ -226,6 +224,14 @@
                         >
                             SEND MESSAGE
                         </button>
+
+                        <!-- FORM FEEDBACK -->
+
+                        <p
+                            id="formStatus"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
 
                     </form>
 
@@ -236,7 +242,6 @@
         </section>
 
     </main>
-
 
     <!-- =========================
          FOOTER
@@ -255,11 +260,82 @@
         </div>
 
         <p>
-            © 2026 Next Level Gaming & Esports Arena
+            &copy; 2026 Next Level Gaming & Esports Arena
         </p>
 
     </footer>
 
+    <!-- =========================
+         CONTACT FORM JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+        const formStatus =
+            document.getElementById("formStatus");
+
+        contactForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            // Check browser validation
+
+            if (!contactForm.checkValidity()) {
+
+                contactForm.reportValidity();
+                return;
+
+            }
+
+            // Retrieve form values
+
+            const name =
+                document.getElementById("contactName").value.trim();
+
+            const email =
+                document.getElementById("contactEmail").value.trim();
+
+            const subject =
+                document.getElementById("contactSubject").value.trim();
+
+            const message =
+                document.getElementById("contactMessage").value.trim();
+
+            // Additional validation
+
+            if (
+                name.length < 2 ||
+                email === "" ||
+                subject === "" ||
+                message.length < 10
+            ) {
+
+                formStatus.textContent =
+                    "Please complete all fields correctly.";
+
+                formStatus.style.color = "#ff6b6b";
+
+                return;
+
+            }
+
+            // Demonstration feedback
+
+            formStatus.textContent =
+                "Form validated successfully. This is a demonstration; no message has been sent.";
+
+            formStatus.style.color = "#30FF88";
+
+            // Clear the form
+
+            contactForm.reset();
+
+        });
+
+    </script>
 
 </body>
 

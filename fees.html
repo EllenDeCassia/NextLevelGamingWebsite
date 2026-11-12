@@ -1,9 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Calculate gaming experience fees, discounts and VAT at Next Level Gaming & Esports Arena."
+    >
 
     <title>Calculate Total Fees | Next Level</title>
 
@@ -12,10 +18,7 @@
 
 <body>
 
-
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <!-- NAVIGATION -->
 
     <header class="navbar">
 
@@ -24,40 +27,24 @@
             <small>GAMING & ESPORTS ARENA</small>
         </div>
 
-        <nav>
+        <nav aria-label="Main navigation">
 
-            <a href="index.html">
-                HOME
-            </a>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT US</a>
+            <a href="packages.html">PACKAGES</a>
+            <a href="experiences.html">EXPERIENCES</a>
 
-            <a href="about.html">
-                ABOUT US
-            </a>
-
-            <a href="packages.html">
-                PACKAGES
-            </a>
-
-            <a href="experiences.html">
-                EXPERIENCES
-            </a>
-
-            <a href="fees.html" class="active">
+            <a href="fees.html" class="active" aria-current="page">
                 CALCULATE FEES
             </a>
 
-            <a href="contact.html">
-                CONTACT
-            </a>
+            <a href="contact.html">CONTACT</a>
 
         </nav>
 
     </header>
 
-
-    <!-- =========================
-         MAIN
-    ========================== -->
+    <!-- MAIN CONTENT -->
 
     <main>
 
@@ -68,29 +55,70 @@
             </h1>
 
             <p class="page-subtitle">
-                Select your experiences and calculate your total cost
+                Select your experiences and calculate
+                your estimated total cost.
             </p>
 
+            <!-- PRICE TABLE -->
 
-            <!-- =========================
-                 FEE CALCULATOR
-            ========================== -->
+            <div class="fee-price-section">
+
+                <h2>EXPERIENCE PRICE LIST</h2>
+
+                <div class="fee-table-wrapper">
+
+                    <table class="fee-price-table">
+
+                        <thead>
+                            <tr>
+                                <th scope="col">EXPERIENCE</th>
+                                <th scope="col">UNIT PRICE</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>VR Experience</td>
+                                <td>R750.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>Racing Experience</td>
+                                <td>R750.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>Escape Room</td>
+                                <td>R750.00</td>
+                            </tr>
+
+                            <tr>
+                                <td>Birthday Experience</td>
+                                <td>R1,500.00</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="fee-note">
+                    A 10% discount applies to subtotals
+                    of R3,000 or more. VAT of 15% is
+                    calculated after the discount.
+                </p>
+
+            </div>
+
+            <!-- FEE CALCULATOR -->
 
             <div class="fees-content">
 
+                <!-- FORM -->
 
-                <!-- =========================
-                     FORM
-                ========================== -->
+                <form class="fee-form" id="feeForm">
 
-                <div class="fee-form">
-
-                    <h2>
-                        SELECT EXPERIENCES
-                    </h2>
-
-
-                    <!-- VR -->
+                    <h2>SELECT EXPERIENCES</h2>
 
                     <label for="vr">
                         VR EXPERIENCE
@@ -99,12 +127,12 @@
                     <input
                         type="number"
                         id="vr"
+                        name="vr"
                         min="0"
+                        step="1"
                         value="0"
+                        required
                     >
-
-
-                    <!-- RACING -->
 
                     <label for="racing">
                         RACING EXPERIENCE
@@ -113,12 +141,12 @@
                     <input
                         type="number"
                         id="racing"
+                        name="racing"
                         min="0"
+                        step="1"
                         value="0"
+                        required
                     >
-
-
-                    <!-- ESCAPE ROOM -->
 
                     <label for="escape">
                         ESCAPE ROOM
@@ -127,12 +155,12 @@
                     <input
                         type="number"
                         id="escape"
+                        name="escape"
                         min="0"
+                        step="1"
                         value="0"
+                        required
                     >
-
-
-                    <!-- BIRTHDAY -->
 
                     <label for="birthday">
                         BIRTHDAY EXPERIENCE
@@ -141,118 +169,91 @@
                     <input
                         type="number"
                         id="birthday"
+                        name="birthday"
                         min="0"
+                        step="1"
                         value="0"
+                        required
                     >
 
-
-                    <button
-                        type="button"
-                        class="btn"
-                        onclick="calculateFees()"
-                    >
+                    <button type="submit" class="btn">
                         CALCULATE TOTAL
                     </button>
 
-                </div>
+                    <p
+                        id="feeError"
+                        role="alert"
+                        aria-live="assertive"
+                    ></p>
 
+                </form>
 
-                <!-- =========================
-                     SUMMARY
-                ========================== -->
+                <!-- FEE SUMMARY -->
 
-                <div class="fee-summary">
+                <div class="fee-summary" aria-live="polite">
 
-                    <h2>
-                        FEE SUMMARY
-                    </h2>
-
-
-                    <div class="summary-line">
-
-                        <span>
-                            Subtotal
-                        </span>
-
-                        <span id="subtotal">
-                            R0.00
-                        </span>
-
-                    </div>
-
+                    <h2>FEE SUMMARY</h2>
 
                     <div class="summary-line">
-
-                        <span>
-                            Discount
-                        </span>
-
-                        <span id="discount">
-                            R0.00
-                        </span>
-
+                        <span>Subtotal</span>
+                        <span id="subtotal">R0.00</span>
                     </div>
-
 
                     <div class="summary-line">
-
-                        <span>
-                            VAT (15%)
-                        </span>
-
-                        <span id="vat">
-                            R0.00
-                        </span>
-
+                        <span>Discount</span>
+                        <span id="discount">R0.00</span>
                     </div>
 
+                    <div class="summary-line">
+                        <span>VAT (15%)</span>
+                        <span id="vat">R0.00</span>
+                    </div>
 
                     <div class="summary-total">
-
-                        <span>
-                            TOTAL
-                        </span>
-
-                        <span id="total">
-                            R0.00
-                        </span>
-
+                        <span>TOTAL</span>
+                        <span id="total">R0.00</span>
                     </div>
 
                 </div>
 
             </div>
 
+            <!-- ADDITIONAL INFORMATION -->
 
-           
+            <div class="card fees-information">
 
+                <h2>READY TO BOOK?</h2>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+                <p>
+                    Once you have calculated your estimated
+                    fees, complete our booking enquiry form
+                    to select your preferred date and time.
+                </p>
+
+                <a href="booking.html" class="btn btn-purple">
+                    MAKE A BOOKING ENQUIRY
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
 
     <footer>
 
         <div class="footer-logo">
-
             <strong>next level</strong>
-
-            <small>
-                GAMING & ESPORTS ARENA
-            </small>
-
+            <small>GAMING & ESPORTS ARENA</small>
         </div>
 
         <p>
-            © 2026 Next Level Gaming & Esports Arena
+            &copy; 2026 Next Level Gaming & Esports Arena
         </p>
 
     </footer>
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
 
     <script src="script.js"></script>
 

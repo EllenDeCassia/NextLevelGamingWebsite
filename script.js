@@ -1,88 +1,123 @@
+
 /* =========================================
-   NEXT LEVEL GAMING & ESPORTS ARENA
-   FEE CALCULATOR
+   NEXT LEVEL FEE CALCULATOR
 ========================================= */
 
+const prices = {
+    vr: 750,
+    racing: 750,
+    escape: 750,
+    birthday: 1500
+};
+
+const feeForm = document.getElementById("feeForm");
 
 function calculateFees() {
 
-    // EXPERIENCE PRICES
+    const quantities = {};
+    const fields = ["vr", "racing", "escape", "birthday"];
 
-    const VR_PRICE = 750;
-    const RACING_PRICE = 750;
-    const ESCAPE_PRICE = 750;
-    const BIRTHDAY_PRICE = 1500;
+    const feeError = document.getElementById("feeError");
 
+    feeError.textContent = "";
 
-    // GET QUANTITIES
+    // Validate quantities
 
-    const vr = Number(
-        document.getElementById("vr").value
-    );
+    for (const field of fields) {
 
-    const racing = Number(
-        document.getElementById("racing").value
-    );
+        const input = document.getElementById(field);
+        const value = input.value.trim();
+        const quantity = Number(value);
 
-    const escape = Number(
-        document.getElementById("escape").value
-    );
+        if (
+            value === "" ||
+            !Number.isInteger(quantity) ||
+            quantity < 0
+        ) {
 
-    const birthday = Number(
-        document.getElementById("birthday").value
-    );
+            feeError.textContent =
+                "Please enter valid whole-number quantities of zero or more.";
 
+            feeError.style.color = "#ff6b6b";
 
-    // CALCULATE SUBTOTAL
+            input.focus();
+            return;
+        }
+
+        quantities[field] = quantity;
+    }
+
+    // Require at least one experience
+
+    const totalQuantity =
+        quantities.vr +
+        quantities.racing +
+        quantities.escape +
+        quantities.birthday;
+
+    if (totalQuantity === 0) {
+
+        feeError.textContent =
+            "Please select at least one experience.";
+
+        feeError.style.color = "#ff6b6b";
+        return;
+    }
+
+    // Calculate subtotal
 
     const subtotal =
-        (vr * VR_PRICE) +
-        (racing * RACING_PRICE) +
-        (escape * ESCAPE_PRICE) +
-        (birthday * BIRTHDAY_PRICE);
+        quantities.vr * prices.vr +
+        quantities.racing * prices.racing +
+        quantities.escape * prices.escape +
+        quantities.birthday * prices.birthday;
 
-
-    // CALCULATE DISCOUNT
+    // Apply discount
 
     let discount = 0;
 
     if (subtotal >= 3000) {
-
         discount = subtotal * 0.10;
-
     }
 
+    // Calculate VAT and total
 
-    // AMOUNT AFTER DISCOUNT
+    const amountAfterDiscount = subtotal - discount;
 
-    const amountAfterDiscount =
-        subtotal - discount;
+    const vat = amountAfterDiscount * 0.15;
 
+    const total = amountAfterDiscount + vat;
 
-    // CALCULATE VAT
+    // Format currency
 
-    const vat =
-        amountAfterDiscount * 0.15;
+    function formatCurrency(amount) {
+        return "R" + amount.toFixed(2);
+    }
 
-
-    // CALCULATE TOTAL
-
-    const total =
-        amountAfterDiscount + vat;
-
-
-    // DISPLAY RESULTS
+    // Display results
 
     document.getElementById("subtotal").textContent =
-        "R" + subtotal.toFixed(2);
+        formatCurrency(subtotal);
 
     document.getElementById("discount").textContent =
-        "R" + discount.toFixed(2);
+        formatCurrency(discount);
 
     document.getElementById("vat").textContent =
-        "R" + vat.toFixed(2);
+        formatCurrency(vat);
 
     document.getElementById("total").textContent =
-        "R" + total.toFixed(2);
+        formatCurrency(total);
+}
 
+// Handle form submission
+
+if (feeForm) {
+
+    feeForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        calculateFees();
+
+    });
 }
