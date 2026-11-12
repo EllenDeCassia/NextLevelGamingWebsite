@@ -1,8 +1,10 @@
 
 /* =========================================
-   NEXT LEVEL FEE CALCULATOR
+   NEXT LEVEL GAMING & ESPORTS ARENA
+   FEE CALCULATOR
 ========================================= */
 
+// Individual experience prices
 const prices = {
     vr: 750,
     racing: 750,
@@ -12,17 +14,39 @@ const prices = {
 
 const feeForm = document.getElementById("feeForm");
 
+// Format amounts in South African Rand
+function formatCurrency(amount) {
+    return "R" + amount.toFixed(2);
+}
+
+// Calculate discount according to bookings
+function getDiscountRate(numberOfBookings) {
+    if (numberOfBookings > 3) {
+        return 0.15;
+    }
+
+    if (numberOfBookings === 3) {
+        return 0.10;
+    }
+
+    if (numberOfBookings === 2) {
+        return 0.05;
+    }
+
+    return 0;
+}
+
+// Calculate total fees
 function calculateFees() {
 
-    const quantities = {};
     const fields = ["vr", "racing", "escape", "birthday"];
+    const quantities = {};
 
     const feeError = document.getElementById("feeError");
 
     feeError.textContent = "";
 
-    // Validate quantities
-
+    // Validate all quantities
     for (const field of fields) {
 
         const input = document.getElementById(field);
@@ -34,7 +58,6 @@ function calculateFees() {
             !Number.isInteger(quantity) ||
             quantity < 0
         ) {
-
             feeError.textContent =
                 "Please enter valid whole-number quantities of zero or more.";
 
@@ -47,15 +70,15 @@ function calculateFees() {
         quantities[field] = quantity;
     }
 
-    // Require at least one experience
-
-    const totalQuantity =
+    // Count total bookings
+    const totalBookings =
         quantities.vr +
         quantities.racing +
         quantities.escape +
         quantities.birthday;
 
-    if (totalQuantity === 0) {
+    // At least one booking is required
+    if (totalBookings === 0) {
 
         feeError.textContent =
             "Please select at least one experience.";
@@ -65,37 +88,26 @@ function calculateFees() {
     }
 
     // Calculate subtotal
-
     const subtotal =
         quantities.vr * prices.vr +
         quantities.racing * prices.racing +
         quantities.escape * prices.escape +
         quantities.birthday * prices.birthday;
 
-    // Apply discount
+    // Apply booking-based discount
+    const discountRate = getDiscountRate(totalBookings);
 
-    let discount = 0;
-
-    if (subtotal >= 3000) {
-        discount = subtotal * 0.10;
-    }
-
-    // Calculate VAT and total
+    const discount = subtotal * discountRate;
 
     const amountAfterDiscount = subtotal - discount;
 
+    // Calculate VAT at 15%
     const vat = amountAfterDiscount * 0.15;
 
+    // Calculate final estimated total
     const total = amountAfterDiscount + vat;
 
-    // Format currency
-
-    function formatCurrency(amount) {
-        return "R" + amount.toFixed(2);
-    }
-
-    // Display results
-
+    // Display calculated amounts
     document.getElementById("subtotal").textContent =
         formatCurrency(subtotal);
 
@@ -110,7 +122,6 @@ function calculateFees() {
 }
 
 // Handle form submission
-
 if (feeForm) {
 
     feeForm.addEventListener("submit", function(event) {
